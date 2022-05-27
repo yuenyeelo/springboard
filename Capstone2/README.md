@@ -19,8 +19,10 @@ With 79 explanatory variables describing (almost) every aspect of residential ho
 ### Data Wrangling
 
 #### Numerical data
+To handle the missing data, we replaced with the mean, there are not many missing numerical data. We then standardized the magnitude of numeric features using a scaler.
 
 #### Category data
+For Category data, there are a lot of missing data, for example, not many houses have pool, so most of the data in pool columns are missing. We replaced the missing data with 'MISSING'.  Then we created dummy or indicator features for categorical variables.
 
 ## EDA
 First, we like to look at the sale price distribution \
