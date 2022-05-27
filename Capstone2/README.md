@@ -1,33 +1,43 @@
 
 ![](./image/ML_housePrice.png)
 # House Price Prediction
-To predict the final price of each home. 
+House price prediction can help people to buy a house by predicting the price range, so buyers can plan their finance. It's also beneficial for property investors to know the trend of housing prices in a certain location.
+Our goal is to predict the final price of each home. 
 
-Help people buy a house 
-Know the price range in the future
-Plan their finance 
-Beneficial for property investors
-Know the trend of housing prices in a certain location
+
 
 
 ### 
 ## Data
 Data source: https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview
 
-With 79 explanatory variables describing (almost) every aspect of residential homes in Ames, Iowa.
+The data was download from Kaggle, there are 1460 entries collected from Jan, 2006 to June, 2010.
+With 79 explanatory variables describing (almost) every aspect of residential homes in Ames, Iowa. 43 of them are category data and 36 are numerical data.
 
 
 
 ### Data Wrangling
 
+#### Numerical data
+
+#### Category data
 
 ## EDA
+First, we like to look at the sale price distribution \
 
-Full report: https://github.com/yuenyeelo/springboard/blob/main/Capstone2/YuenYeeLo_Capstone2_EDA.ipynb
+![](./image/housePrice_salePrice_distribution.png)
 
-Category data: We found that the neighborhood and the pool have impact on the SalePrice. 
+I am also interested to see how many house were sold as of the month of the year, we can see that more houses were sold during summer.
+
+![](./image/housePrice_sold_month.png)
+
+\
+
+Category data: We found that the neighborhood and the pool quality (poolQC) have impact on the SalePrice. 
 ![](./image/housePrice_neighborhood.png)
 ![](./image/housePrice_poolQc.png)
+
+Full report: https://github.com/yuenyeelo/springboard/blob/main/Capstone2/YuenYeeLo_Capstone2_EDA.ipynb
 
 
 ## Machine Learning Modeling
