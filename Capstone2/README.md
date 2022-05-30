@@ -76,6 +76,10 @@ We built a baseline model using linear regression and compare to the random fore
 We performed feature selection from the features importance of RF and found that reducing features can improve the system performance. We also found that 
 categories data show no significant impact. Gradient boosting regression performs the best
 ### Further improvement: 
+##### Deep Learning
+Deep Learning is a subset of Machine Learning that achieves great power and flexibility by learning to represent the world as nested hierarchy of concepts, with each concept defined in relation to simpler concepts, and more abstract representations computed in terms of less abstract ones.
+Deep learning (if we have more data), in general, deep learning can performs better if we have a lot of data. Deep learning to learn high-level features from data in an incremental manner. This eliminates the need of domain expertise and hard core feature extraction. We can use the data of SalePrice in USA, instead of one city, also include the average income, education level, etc. That may further improve the house price prediction and provide better insgiht to the buyers and invester.
+
 ##### Parameter tuning
-##### Deep learning (if we have more data), 
+Parameter tuning is a technique to optize the model, for example , in decision tree, random forest, we can tune the depth of the tree, number of nodes to split, or stop.  To furter improve the system, we would tune the parameters. 
 
