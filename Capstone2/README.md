@@ -21,6 +21,9 @@ With 79 explanatory variables describing (almost) every aspect of residential ho
 #### Numerical data
 To handle the missing data, we replaced with the mean, there are not many missing numerical data. We then standardized the magnitude of numeric features using a scaler.
 
+The Sale Price is also normalized according, with mean price $181K, minimum is $35K, and maximum price is $755K.
+
+
 #### Category data
 For Category data, there are a lot of missing data, for example, not many houses have pool, so most of the data in pool columns are missing. We replaced the missing data with 'MISSING'.  Then we created dummy or indicator features for categorical variables.
 
@@ -31,11 +34,18 @@ First, we like to look at the sale price distribution, Normal distribution, log 
 <img src="./image/housePrice_salePrice_LogNormalDist.png" width="300">
 <img src="./image/housePrice_salePrice_distribution.png" width="300">
 </p>
+<p align = "center">
+Figrue: SalePrice distribution
+</p>
 
 I am also interested to see how many house were sold as of the month of the year, we can see that more houses were sold during summer.
 
-![](./image/housePrice_sold_month.png)
-
+<p align = "center">
+<img src ="./image/housePrice_sold_month.png">
+</p>
+<p align = "center">
+Figrue: Number of house sale per month , from year 2006 to 2009
+</p>
 
 
 Category data: We found that the neighborhood and the pool quality (poolQC) have impact on the SalePrice. 
@@ -57,20 +67,42 @@ Random Forest Regression is an ensemble technique, which can perform regression 
 
 #### Features Selection
 Random forest can give us insight about the feature importance. Reduce number of features can reduces the complexity of a model, easier to interpret and improves the accuracy if the right subset is chosen.  
-![](./image/housePrice_featureSelection.png)
-###### Let take a look of the relationship between Overall Quality vs SalePrice
-![](./image/housePrice_vs_OverallQual.png)
+<p align = "center">
+<img src="./image/housePrice_featureSelection.png">
+</p>
+<p align = "center">
+Figrue: Top features from the Random forest model's feature importance coefficients
+</p>
+From the model, we can see that the overall quality has the highest importance. Let take a look of the relationship between Overall Quality vs SalePrice
+<p align = "center">
+<img src="./image/housePrice_vs_OverallQual.png">
+</p>
+<p align = "center">
+Figrue: OverallQual is highly correlated to SalePrice
+</p>
+
 ### Gradient Boosting
 The main difference between random forests and gradient boosting lies in how the decision trees are created and aggregated. Unlike random forests, the decision trees in gradient boosting are built additively; in other words, each decision tree is built one after another.
 However, these trees are not being added without purpose. Each new tree is built to improve on the deficiencies of the previous trees and this concept is called boosting.
 
 ## Results
-In regression task, we measure our system with difference between the original and predicted values in the test set. The lowest the difference, the better the model performs. There are 3 main matric: Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE) as result matric.  We reported the baseline linear regression, random forest regression (all features and selected Top10 important features) and gradient boosting regression are reported. We found that reduce features can improve the performance and gradient boosting performs the best amoung all three models. 
+In regression task, we measure our system with difference between the original and predicted values in the test set. The lowest the difference, the better the model performs. There are 3 main matric: Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE) as result matric.  We reported the baseline linear regression, random forest regression (all features and selected Top10 important features) and gradient boosting regression are reported. We found that reduce features can improve the performance and gradient boosting performs the best amoung all three models. The results are in normalized SalePrice scale.
 
-![](./image/housePrice_resultMatric.png)
-#######
+
+<p align = "center">
+<img src = "./image/housePrice_resultMatric.png">
+</p>
+<p align = "center">
+Results: MSE,MAE, RMSE of Predicted SalePrise vs. Actual SalePrice, in Normalized scale.
+</p>
+
 
 ![Figure: Predicted Sale Price vs Actual Sale Price, Price are nornalized](./image/housePrice_predictedPrice.png)
+<p align = "center">
+Figrue: Actual SalePrice vs Predicted SalePrice, in Normalized scale. 
+</p>
+
+
 ## Conclusion
 We built a baseline model using linear regression and compare to the random forest regression and gradient boosting regression. 
 We performed feature selection from the features importance of RF and found that reducing features can improve the system performance. We also found that 
