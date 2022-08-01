@@ -54,14 +54,15 @@ Cold start is when we have no history of the users, the recommendation system wi
 <img src="./images/Top10_MostPopular.png">
 
 ### Content-based methods
-Content-based algorithms use the set of user history to generate a prediction. These systems employ statistical techniques to find a set of users known as neighbors, who have already agreed with the active user (ie they tend to listen to a similar set of items). Once this set of users is formed, these systems use different algorithms to combine the preferences of neighbors to produce a prediction or top-N recommendation for the active user.
-
+Content-based methods give recommendations based on the similarity of two song contents or attributes while collaborative methods make a prediction on possible preferences using a matrix on different songs.
 
 If the user picked one song, we can find the similar songs for the user. Here is an example, if user picked "Oliver James Fleet Foxes", we can recommend 
 similar songs to the users
 <img src="./images/SimilarSong_OliverJames_FleetFoxes.png">
 
 ### Collaborative filtering
+ Collaborative filtering technology is currently the most successful and widely used technology in the recommendation system. It has achieved rapid development in theoretical research and practice. It selects information and similarity relationships based on the user’s history and collects others that are the same as the user’s preference. Collaborative filtering is a technique that can filter out items that a user might like on the basis of reactions by similar users. It works by searching a large group of people and finding a smaller set of users with tastes similar to a particular user.
+
 Imagine you are at an office party. You run into John, the HR guy. You start a conversation about your musical interests and you find out that John had listened to songs A, B, C and D this week. It just so happens that you like songs B,C,D and E. You realise that the both of you have the same musical taste and so you decide to listen to song A. In turn, you tell John to listen to song E. This is exactly how collaborative filtering works!
 <img src="./images/CF_example.png">
 
